@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}Viewing Event {{ event.title }}{% endblock %}
+
+{% block banner %}
+    <h1>{{ event.title }}</h1>
+    
+    <p>Date: {{ event.date_of_event|date:"F j, Y" }}</p>
+    
+  
+    
+    {% if event.hosted_by %}
+        <p>
+            <strong>Hosted By:</strong>
+            {{ event.hosted_by }}
+        </p>
+    {% endif %}
+    
+    {% if event.street_address %}
+        <p>
+            <strong>Address:</strong><br>
+            {{ event.street_address }}<br>
+            {{ event.city }}, {{ event.state }} {{ event.zip_code }}<br>
+            {{ event.telephone }}
+        </p>
+    {% endif %}
+    
+  
+    
+    <form method="post" action=".">
+        <table>
+            {{ form.as_table }}
+             {% csrf_token %}
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="RSVP">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+   
+    
+   
+{% endblock %}
+
+
+          {% block column-1 %}
+               <!-- <h2>On the day</h2>
+                <p>All the small details including a programme for the day, timings and addresses.</p>
+                <p><a class="btn" href="#">Coming Soon &raquo;</a></p>
+            -->
+          {% endblock %}
+
+          {% block column-2 %}
+              <!--  <h2>Where to stay</h2>
+                <p>Hotels, Apartments, Card board boxes...</p>
+                <p><a class="btn" href="#">Coming Soon &raquo;</a></p>
+            -->
+          {% endblock %}
+
+           {% block column-3 %}
+                
+          {% endblock %}
+           {% block column-4 %}
+                
+          {% endblock %}

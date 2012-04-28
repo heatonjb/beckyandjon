@@ -1,0 +1,27 @@
+{% extends "theme_base.html" %}
+
+{% load metron_tags %}
+{% load i18n %}
+
+{% block extra_head_base %}
+    {% block extra_head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
+    {% endblock %}
+{% endblock %}
+
+ {% block nav %}
+<h3>
+<a href="/rsvp/event/becky-jon-london-2012/">RSVP</a>
+</h3>
+ {% endblock %}
+
+{% block footer %}
+<div class="legal">
+    {% include "_footer.html" %}
+</div>
+{% endblock %}
+
+{% block extra_body_base %}
+    {% analytics %}
+    {% block extra_body %}{% endblock %}
+{% endblock %}
