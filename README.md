@@ -1,4 +1,0 @@
-beckyandjon
-===========
-
-Django Wedding Website

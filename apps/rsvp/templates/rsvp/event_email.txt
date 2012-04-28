@@ -1,3 +1,0 @@
-{{ event.email_message }}
-
-To RVSP to this invite, please visit http://{{ site.domain }}{{ event.get_absolute_url }}.
