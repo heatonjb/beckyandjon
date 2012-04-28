@@ -15,7 +15,7 @@ wsgi_entry_point = wsgi:application
 migrations = none
 
 ; Whether or not to run collectstatic during deployment
-staticfiles = off
+staticfiles = on
 
 ; Whether or not to run compress (from django_compressor) during deployment
 compressor = off
