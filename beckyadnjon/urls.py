@@ -23,6 +23,13 @@ urlpatterns = patterns("",
     url(r"^rsvp/", include("rsvp.urls"))
 )
 
+urlpatterns+=patterns('django.views.generic.simple',(r'^wheretostay/', 'direct_to_template', {'template': 'wheretostay.html'}),)
+urlpatterns+=patterns('django.views.generic.simple',(r'^ontheday/', 'direct_to_template', {'template': 'ontheday.html'}),)
+urlpatterns+=patterns('django.views.generic.simple',(r'^thingstodo/', 'direct_to_template', {'template': 'thingstodo.html'}),)
+urlpatterns+=patterns('django.views.generic.simple',(r'^other/', 'direct_to_template', {'template': 'other.html'}),)
+
+
+
 
 if settings.SERVE_MEDIA:
     urlpatterns += patterns("",

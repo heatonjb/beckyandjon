@@ -30,6 +30,11 @@ html body {
     margin-bottom: 0;
 }
 
+.hero-unit h3 {
+    font-size: 23px;
+}
+
+
 ul {
     list-style: none outside none;
 }
@@ -71,4 +76,6 @@ li label {
     margin: 0 10px;
     width: auto;
 }
+
+
 

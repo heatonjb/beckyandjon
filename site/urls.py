@@ -23,6 +23,8 @@ urlpatterns = patterns("",
     url(r"^rsvp/", include("rsvp.urls"))
 )
 
+urlpatterns+=patterns('django.views.generic.simple',  24(r'^wheretostay/', 'direct_to_template', {'template': 'wheretostay.html'}),)
+
 
 if settings.SERVE_MEDIA:
     urlpatterns += patterns("",
